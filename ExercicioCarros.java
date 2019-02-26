@@ -3,7 +3,7 @@ package exercicio;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-//ExercÌcio realizado pelos alunos:
+//Exerc√≠cio realizado pelos alunos:
 //	Adler Mateus Cachuba
 //	Elisariane Barbosa
 public class ExercicioCarros {
@@ -20,18 +20,18 @@ public class ExercicioCarros {
 		ArrayList<Carros> categoriaDois = new ArrayList();
 		ArrayList<Carros> categoriaTres = new ArrayList();
 
-		// Vai realizar atÈ o usuario digitar 0
+		// Vai realizar at√© o usuario digitar 0
 		do {
 			System.out.println("Bem vindo ao Sistema de Carros IFPR 2019");
 			System.out.println("1- Cadastrar carro");
-			System.out.println("2- Visualizar todos carros e suas caracterÌsticas");
+			System.out.println("2- Visualizar todos carros e suas caracter√≠sticas");
 			System.out.println("3- Mostrar carros nas categorias");
 			System.out.println("0- Sair do programa");
 
 			System.out.println("--------------");
 
-			// Usuario digita sua opÁ„o
-			System.out.print("Digite sua opÁ„o:");
+			// Usuario digita sua op√ß√£o
+			System.out.print("Digite sua op√ß√£o:");
 			Scanner digitaMenu = new Scanner(System.in);
 			escolha = digitaMenu.nextInt();
 
@@ -47,13 +47,13 @@ public class ExercicioCarros {
 					System.out.print("Digite o ano do carro: ");
 					carro.ano = digita.nextInt();
 
-					System.out.print("Digite true se for novo, caso contr·rio digite false: ");
+					System.out.print("Digite true se for novo, caso contr√°rio digite false: ");
 					carro.novo = digita.nextBoolean();
 
-					System.out.print("Digite o preÁo: ");
+					System.out.print("Digite o pre√ßo: ");
 					carro.preco = digita.nextDouble();
 
-					// Colocamos ele na categoria conforme seu preÁo, e na categoria global
+					// Colocamos ele na categoria conforme seu pre√ßo, e na categoria global
 					if (carro.preco <= 10000) {
 						categoriaUm.add(carro);
 					}
@@ -72,7 +72,7 @@ public class ExercicioCarros {
 					System.out.println("-----------------------");
 					System.out.println("Cadastrar outro carro?");
 					System.out.println("1- Sim");
-					System.out.println("0- N„o");
+					System.out.println("0- N√£o");
 					System.out.println("----------------------");
 					usuarioNovoCarro = digita.nextInt();
 
@@ -81,13 +81,13 @@ public class ExercicioCarros {
 			}
 
 			if (escolha == 2) {
-				// Mostramos a quantidade de carros disponÌveis, e todos os carros e seus
+				// Mostramos a quantidade de carros dispon√≠veis, e todos os carros e seus
 				// atributos
 				System.out.println("Mostrar todos os Carros e suas Categorias");
-				System.out.println("Atualmente temos " + carrolista.size() + " carros disponÌveis");
+				System.out.println("Atualmente temos " + carrolista.size() + " carros dispon√≠veis");
 				System.out.println("-----------------------------------------");
 				for (int i = 0; i < carrolista.size(); i++) {
-					System.out.println("Carro n˙mero " + (i + 1) + carrolista);
+					System.out.println("Carro n√∫mero " + (i + 1) + carrolista);
 
 				}
 
@@ -103,32 +103,32 @@ public class ExercicioCarros {
 				System.out.println("2- Carros de R$10.000 a R$20.000");
 				System.out.println("3- Carros com valor acima de R$20.000");
 				System.out.println("-----------------------------------------");
-				System.out.print("Digite sua opÁ„o:");
+				System.out.print("Digite sua op√ß√£o:");
 				Scanner escolhaCat = new Scanner(System.in);
 				escolhaCategoria = escolhaCat.nextInt();
 
 				if (escolhaCategoria == 1) {
 					for (int i = 0; i < categoriaUm.size(); i++) {
-						System.out.println("Atualmente temos " + categoriaUm.size() + " carros disponÌveis");
-						System.out.println("Carro n˙mero " + (i + 1) + categoriaUm);
+						System.out.println("Atualmente temos " + categoriaUm.size() + " carros dispon√≠veis");
+						System.out.println("Carro n√∫mero " + (i + 1) + categoriaUm);
 					}
 					System.out.println("-----------------------------------------");
 				}
 				if (escolhaCategoria == 2) {
 					for (int i = 0; i < categoriaDois.size(); i++) {
-						System.out.println("Atualmente temos " + categoriaDois.size() + " carros disponÌveis");
-						System.out.println("Carro n˙mero " + (i + 1) + categoriaDois);
+						System.out.println("Atualmente temos " + categoriaDois.size() + " carros dispon√≠veis");
+						System.out.println("Carro n√∫mero " + (i + 1) + categoriaDois);
 					}
 					System.out.println("-----------------------------------------");
 				}
 				if (escolhaCategoria == 3) {
 					for (int i = 0; i < categoriaTres.size(); i++) {
-						System.out.println("Atualmente temos " + categoriaTres.size() + " carros disponÌveis");
-						System.out.println("Carro n˙mero " + (i + 1) + categoriaTres);
+						System.out.println("Atualmente temos " + categoriaTres.size() + " carros dispon√≠veis");
+						System.out.println("Carro n√∫mero " + (i + 1) + categoriaTres);
 					}
 					System.out.println("-----------------------------------------");
-				} else {
-					System.out.println("VocÍ digitou uma categoria que est· vazia por enquanto ");
+				} if (escolhaCategoria != 1 && escolhaCategoria !=2 && escolhaCategoria !=3) {
+					System.out.println("Voc√™ digitou uma categoria que n√£o existe por enquanto ");
 					System.out.println("-----------------------------------------");
 				}
 
